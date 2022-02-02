@@ -1,1 +1,1 @@
-# DUCKY-WINDOWS-PASSWORD-GRABBER
+If you want your payload to work, you must first configure your Rubber Duck or Rasberry Pi. If you don't know how to do that in this video Mr. Chuck will explain everything you have to know https://www.youtube.com/watch?v=e_f9p-_JWZw
